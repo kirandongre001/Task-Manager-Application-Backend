@@ -1,5 +1,6 @@
-const { MongoClient } = require("mongodb");
-const dotenv = require("dotenv");
+// connection/db.js
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -15,4 +16,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = { client, connectDB };
+export { client, connectDB };

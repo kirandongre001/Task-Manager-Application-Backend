@@ -1,14 +1,13 @@
-// 
-
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const { connectDB } = require("./config/db");
+// import { connectDB } from "./connection/db"
 const authRoutes = require("./routes/authRoutes");
+const { connectDB } = require("./connection/db");
 
 dotenv.config();
-connectDB();
+connectDB
 
 const app = express();
 app.use(express.json());
